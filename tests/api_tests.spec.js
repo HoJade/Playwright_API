@@ -18,6 +18,10 @@ test('API GET Request', async ({ request }) => {
     // Step 6: Write response on the console
     console.log(await response.json())
 
+    // Verify whether the HTTP response was successful
+    // ensures the response status code is within 200...299 range
+    expect(response.ok()).toBeTruthy()
+
 })
 
 
